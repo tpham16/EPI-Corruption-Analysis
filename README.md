@@ -18,27 +18,32 @@ For this project, I built a ETL pipeline in Python. In order to accomplish this,
 ## Usage 
 First, I created an engine object using 'create_object' and passed the location of the database that created in Postgres. Then, I created a connection object by connecting the engine. 
 
-```
-# psycopg2
+```sh 
+# create an SQLAlchemy engine using psycopg2
 engine = create_engine('postgresql+psycopg2://postgres:password@localhost:5432/epi')
 session = Session(engine)
 ```
-After extracting the EPI dataframe into the eda.py file, I filtered to a specific subregion and saved into a dataframe. 
+After extracting the EPI dataframe into the eda.py file, I filtered to a specific subregion and saved the EPI data into a dataframe. 
 
-```
-# filter data to a specific geographic subregion 
+```sh 
 rows = query.filter(epi_country.geo_subregion == 'Western Europe').all()
-# save EPI data into a dataframe
+
 epi_df = pd.DataFrame(rows, columns=["country", "air_h", "water_h", "biodiversity", "fisheries", "epi", "geo_subregion"])
 ```
 
-Then, I created and imported a new dataframe using Pandas and saved it back into the Postgres database. 
-```
-# save it back into postgres database
+Then, I loaded in the Corruption Index dataset using Pandas and performed a 'left join' on EPI data on the newly loaded Corruption Index dataset. 
+
+```sh
+
+corr_df = pd.read_csv('CPI-2010-new_200601_105629.csv')
+
 corr_df.to_sql('corruption_epi', engine, if_exists='replace', index = False)
 
 corr_epi = epi_df.merge(corr_df, how="left", on="country")
 
 ```
+
 ## Findings 
-Finally, I generated 3 visualizations (scatter-plots, bar-graphs, histograms)
+After performing a left join, I generated 3 visualizations (scatter-plots, bar-graphs, histograms). In the scatter plot, there is a low positive correlation between EPI and Corruption. 
+
+![Alt text](relative/path/to/img.jpg?raw=true "scatter-plot.png")

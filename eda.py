@@ -39,8 +39,6 @@ corr_df.to_sql('corruption_epi', engine, if_exists='replace', index = False)
 
 corr_epi = epi_df.merge(corr_df, how="left", on="country")
 
-corr_epi.head()
-
 # generate scatter plot, bar graphs, histograms comparing Corruption Scores and EPI
 corr_epi.plot.scatter(y ='epi', x ='score', title = 'Scatter Plot of Environmental Performance Index (EPI) Scores and Corruption')
 
