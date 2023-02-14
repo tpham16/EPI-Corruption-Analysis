@@ -1,5 +1,5 @@
 # Analysis of 2010 Environmental Performance Index (EPI) and Corruption Index Scores on Western Europe Countries 
-An EPI and Corruption Index Exploratory Data Analysis (EDA) project using Python and SQLAlchemy that explores the effects of corruption on Environmental Performance Index (EPI) of Western Europe Countries in 2010. 
+An EPI and Corruption Index Exploratory Data Analysis (EDA) project using Python and SQLAlchemy that explores the effects of corruption on Environmental Performance Index (EPI) of Western Europe countries in 2010. 
 ## About The Project 
 Exploratory Data Analysis (EDA) is the crucial process of using statistics and graphs to perform preliminary investigations on data in order to uncover patterns, trends, detect anomalies, and test hypotheses. Before performing any kind of data analysis, raw data needs to be cleaned and stuctured via the ETL pipeline, a core concept of extracting, transforming, and loading data. 
 
