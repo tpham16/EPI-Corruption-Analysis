@@ -1,11 +1,11 @@
-# The Analysis of 2010 Environmental Performance Index (EPI) and Corruption Index on West European Countries 
-An EPI and Corruption Index Exploratory Data Analysis (EDA) project using Python and SQLAlchemy that explores the effects of corruption on Environmental Performance Index (EPI) on West European Countries in 2010. 
+# The Analysis of 2010 Environmental Performance Index (EPI) and Corruption Index on Western Europe Countries 
+An EPI and Corruption Index Exploratory Data Analysis (EDA) project using Python and SQLAlchemy that explores the effects of corruption on Environmental Performance Index (EPI) on Western Europe Countries in 2010. 
 ## About The Project 
 Exploratory Data Analysis (EDA) is the crucial process of using statistics and graphs to perform investigations on data in order to uncover patterns, trends, detect anomalies, and test hypothesis. Before performing any kind of data analysis, raw data needs to be cleaned and stuctured via the ETL pipeline, a core concept of extracting, transforming, and loading data. 
 
 ![](https://github.com/tpham16/EPI_Analysis/blob/main/resources/ETL%20pipeline.png)
 
-For this EDA project, I explored the effects of corruption on environmental performance on West Europeon Countries. 
+For this EDA project, I explored the effects of corruption on environmental performance on Western Europe Countries. 
 
 ## Built With
 * [pandas](https://pandas.pydata.org/docs/)
@@ -16,7 +16,7 @@ For this EDA project, I explored the effects of corruption on environmental perf
 
 ## Getting Started
 ### Install SQLAlchemy
-* SQLAlchemy 
+SQLAlchemy 
   ```sh
   pip install sqlalchemy
   ```
