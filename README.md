@@ -62,4 +62,4 @@ In the histogram, the distribution is slightly right skewed and most of the valu
 
 ![Hist-Plot](https://github.com/tpham16/EPI_Analysis/blob/main/resources/hist.png)
 
-With these findings, there is a slight positive correlation between EPI and higher corruption index scores. However, there is not enought data to draw conclusions due to various outliers which showed that countries with lower corruption index scores having similar EPIs.
+With these findings, there is a slight positive correlation between EPI and higher corruption index scores. However, there is not enough data to draw conclusions due to various outliers which showed that countries with lower corruption index scores having similar EPIs.
