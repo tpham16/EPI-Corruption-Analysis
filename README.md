@@ -26,7 +26,24 @@ In order to get the project running, I pulled EPI data from the database by conn
 
 ```sh 
 engine = create_engine('postgresql+psycopg2://postgres:password@localhost:5432/epi')
+Base = automap_base()
+Base.prepare(engine, reflect=True)
+
+epi_country = Base.classes.epi_country
+
+# query database 
 session = Session(engine)
+
+# make a query for selected rows 
+query = session.query(
+    epi_country.country, 
+    epi_country.air_h, 
+    epi_country.water_h, 
+    epi_country.biodiversity, 
+    epi_country.fisheries, 
+    epi_country.epi, 
+    epi_country.geo_subregion
+)
 ```
 After extracting the EPI dataframe into the eda.py file, I filtered to a specific subregion and saved that EPI data into a dataframe. 
 
