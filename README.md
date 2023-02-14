@@ -50,11 +50,12 @@ corr_epi = epi_df.merge(corr_df, how="left", on="country")
 ## Findings 
 After performing a left join, I generated 3 visualizations (scatter-plots, bar-graphs, histograms) using in-built Pandas functions. In the scatter plot, there is a low positive correlation between EPI and Corruption for West European Countries. 
 ```sh
-corr_epi.plot.scatter(y ='epi', x ='score', title = 'Scatter Plot of Environmental Performance Index (EPI) Scores and Corruption')
+scatter_plot = corr_epi.plot.scatter(y ='epi', x ='score', title = 'Scatter Plot of EPI and Corruption Index Scores (2010)',bins=20)
+scatter_plot.figure.savefig('resources/scatter.png', dpi=300)
 ```
 ![Scatter-Plot](https://github.com/tpham16/EPI_Analysis/blob/main/resources/scatter.png)
 
-The bar graph does not provide enough data to draw a between the Environmental Performance Index (EPI) and Corruption. 
+The bar graph does not provide enough data to draw a correlation between the Environmental Performance Index (EPI) and Corruption. 
 
 ![Bar-Plot](https://github.com/tpham16/EPI_Analysis/blob/main/resources/bar.png)
 
